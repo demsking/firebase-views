@@ -1,0 +1,48 @@
+{
+  "name": "firebase-views",
+  "version": "0.1.0",
+  "description": "A Firebase Views Maganer",
+  "main": "lib/view.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "prepublish": "npm test",
+    "pretest": "npm run lint",
+    "test": "mocha --harmony test/*.spec.js",
+    "lint": "standard index.js lib/* test/*.spec.js",
+    "lintd": "nodemon -x 'npm run lint'",
+    "testd": "nodemon -x 'mocha --harmony --trace-warnings test/*.spec.js'",
+    "coverage": "istanbul cover _mocha test/*.spec.js",
+    "coveraged": "nodemon -x 'npm run coverage'",
+    "coveralls": "npm run lint && istanbul cover _mocha --report lcovonly -- -R spec test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demsking/firebase-views.git"
+  },
+  "keywords": [
+    "firebase",
+    "views",
+    "manager"
+  ],
+  "author": "Sébastien Demanou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/demsking/firebase-views/issues"
+  },
+  "homepage": "https://github.com/demsking/firebase-views#readme",
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "firebase-admin": "^5.2.1",
+    "firebase-functions": "^0.6.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.12.0",
+    "sinon": "^3.2.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
