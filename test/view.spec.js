@@ -4,7 +4,7 @@ const admin = require('firebase-admin-shadow')
 const assert = require('assert')
 const view = require('../lib/view')
 
-/* global describe it */
+/* global describe it beforeEach afterEach */
 
 describe('View API', () => {
   describe('view.validate()', () => {
@@ -236,7 +236,7 @@ describe('View API', () => {
     const dump = {
       heros: [
         { firstname: 'Rosa Louise', lastname: 'McCauley Parks', born: 1913, countryCode: 'us' },
-        { firstname: 'Martin Luther', lastname: 'King Jr.', born: 1929, countryCode: 'us', countryCode: 'us' },
+        { firstname: 'Martin Luther', lastname: 'King Jr.', born: 1929, countryCode: 'us' },
         { firstname: 'George', lastname: 'Washington', born: 1732, countryCode: 'us' },
         { firstname: 'Chaka', lastname: 'Zulu', born: 1787, countryCode: 'sa' },
         { firstname: 'William', lastname: 'Shakespeare', born: 1564, countryCode: 'uk' }
@@ -270,7 +270,6 @@ describe('View API', () => {
           ]
         }
       ]
-      const results = []
       const expected = [
         { firstname: 'Chaka',
           lastname: 'Zulu',

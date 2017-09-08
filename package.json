@@ -40,7 +40,8 @@
     "mocha": "^3.5.0",
     "nodemon": "^1.12.0",
     "sinon": "^3.2.1",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "firebase-admin-shadow": "git://github.com/demsking/firebase-admin-shadow#develop"
   },
   "dependencies": {
     "underscore": "^1.8.3"
